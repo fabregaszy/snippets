@@ -1,3 +1,4 @@
+<?php
 function exec_cmd($command, $timeout, &$cmd_output, &$cmd_ret_val)
 {
 	// if timeout is not set or 0, use default
@@ -70,7 +71,7 @@ function exec_cmd($command, $timeout, &$cmd_output, &$cmd_ret_val)
 	/**
 	* http://www.tldp.org/LDP/abs/html/exitcodes.html
 	* 1	Catchall for general errors	let "var1 = 1/0"
-  * 2	Misuse of shell builtins (according to Bash documentation)
+	* 2	Misuse of shell builtins (according to Bash documentation)
 	* 126	Command invoked cannot execute
 	* 127	"command not found"	illegal_command	Possible problem with $PATH or a typo
 	* 128	Invalid argument to exit
@@ -87,3 +88,4 @@ function exec_cmd($command, $timeout, &$cmd_output, &$cmd_ret_val)
 
 	return $ret_val;
 }
+?>
